@@ -139,8 +139,110 @@
 
       .schedule {
         display: block;
-        height: 1500px;
         background: -webkit-linear-gradient(#000000 0%, #1e3442 50%, #36596f 100%);
+        color: white;
+      }
+
+      .schedule .schedule-container {
+        position: relative;
+        /*top: 120px;
+        margin-top: -120px;*/
+      }
+
+      .schedule .stage {
+        color: #9D387F;
+        text-transform: uppercase;
+        font-family: 'Antonio-Bold';
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .schedule .stage .type {
+        width: calc(50% - 38px);
+      }
+
+      .schedule .stage .type:first-of-type {
+        text-align: right;
+      }
+
+      .schedule .stage .timeline {
+        padding: 0 30px;
+        height: 87px;
+      }
+
+      .schedule .stage .timeline .timeline-bar {
+        width: 4px;
+        background: -webkit-linear-gradient(rgba(123, 146, 161, 0), rgba(123, 146, 161, 0.2));
+        margin: 0 auto;
+        display: inline-block;
+        height: 100%;
+      }
+
+      .schedule .performance {
+        text-align: center;
+        display: flex;
+      }
+
+      .schedule .performance:nth-of-type(2n) {
+        justify-content: flex-start;
+        text-align: right;
+        padding-right: calc(50% - 38px);
+        flex-direction: row-reverse;
+      }
+
+      .schedule .performance:nth-of-type(2n+1) {
+        justify-content: flex-start;
+        text-align: left;
+        padding-left: calc(50% - 38px);
+      }
+
+      .schedule .performance .timeline {
+        display: inline-block;
+        padding: 0 30px;
+      }
+
+      .schedule .performance .timeline .timeline-dot {
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 4px;
+        margin: 4px;
+      }
+
+      .schedule .performance .timeline .timeline-bar {
+        width: 4px;
+        background-color: rgba(123, 146, 161, 0.2);
+        height: calc(100% - 16px);
+        margin: 0 auto;
+      }
+
+      .schedule .performance:last-of-type .timeline .timeline-bar {
+        background: -webkit-linear-gradient(rgba(123, 146, 161, 0.2), rgba(123, 146, 161, 0));
+      }
+
+      .schedule .performance > span {
+        display: inline-block;
+      }
+
+      .schedule .performance > span > span {
+        display: block;
+      }
+
+      .schedule .performance .performanceTime {
+        color: #EB942D;
+      }
+
+      .schedule .performance .performanceName {
+        text-transform: capitalize;
+        font-family: 'Antonio-Bold';
+        font-size: 37px;
+        padding: 8px 0;
+      }
+
+      .schedule .performance .performanceLink {
+        color: #7B92A1;
+        font-size: 14px;
       }
 
       footer div {
@@ -173,19 +275,19 @@
       <nav>
         <ul>
           <li>
-            <a href="">home</a>
+            <a>home</a>
           </li>
           <li>
-            <a href="">news</a>
+            <a>news</a>
           </li>
           <li>
-            <a href="" class="active">line up</a>
+            <a class="active">line up</a>
           </li>
           <li>
-            <a href="">tickest</a>
+            <a>tickest</a>
           </li>
           <li>
-            <a href="">info</a>
+            <a>info</a>
           </li>
         </ul>
       </nav>
@@ -194,11 +296,174 @@
         <p class="title">Postrock Festival</p>
         <p class="time">25 August 2015</p>
         <div>
-          <a href="" class="btn">Book Ticket</a>
+          <a class="btn">Book Ticket</a>
         </div>
       </div>
     </section>
     <section class="schedule">
+      <div class="schedule-container">
+        <div class="stage">
+          <span class="type">main stage</span>
+          <span class="timeline">
+            <span class="timeline-bar"></span>
+          </span>
+          <span class="type">other stage</span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">22:15-23:45</span>
+            <span class="performanceName">Mogwai</span>
+            <span class="performanceLink">mogwai.co.uk</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">21:30-23:00</span>
+            <span class="performanceName">Sigur Ros</span>
+            <span class="performanceLink">sigur-ros.co.uk</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">20:15-21:20</span>
+            <span class="performanceName">Explosions In The Sky</span>
+            <span class="performanceLink">explosionsinthesky.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">19:00-20:00</span>
+            <span class="performanceName">This Will Destory You</span>
+            <span class="performanceLink">thiswilldestoryyou.bandcamp.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">18:30-19:30</span>
+            <span class="performanceName">Thee Silver Mount Zion</span>
+            <span class="performanceLink">tra-la-la-band.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">17:15-18:30</span>
+            <span class="performanceName">Dodspeed You! Black Emperor</span>
+            <span class="performanceLink">brainwashed.com/godspeed</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">17:00-18:00</span>
+            <span class="performanceName">God Is An Astronaut</span>
+            <span class="performanceLink">godisanastronaut.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">15:30-16:30</span>
+            <span class="performanceName">Tides From Nebula</span>
+            <span class="performanceLink">tidesfromnebula.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">15:15-16:15</span>
+            <span class="performanceName">65 Days Of Static</span>
+            <span class="performanceLink">65daysofstatic.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">14:00-14:45</span>
+            <span class="performanceName">Maybeshewill</span>
+            <span class="performanceLink">maybeshewill.net</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">13:45-14:45</span>
+            <span class="performanceName">El Ten Eleven</span>
+            <span class="performanceLink">elteneleven.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">12:30-13:30</span>
+            <span class="performanceName">Yndi Halda</span>
+            <span class="performanceLink">yndihalda.com</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">12:15-13:15</span>
+            <span class="performanceName">I Like Trains</span>
+            <span class="performanceLink">iliketrains.co.uk</span>
+          </span>
+        </div>
+        <div class="performance">
+          <span class="timeline">
+            <span class="timeline-dot"></span>
+            <span class="timeline-bar"></span>
+          </span>
+          <span>
+            <span class="performanceTime">11:00-12:00</span>
+            <span class="performanceName">Errors</span>
+            <span class="performanceLink">weareerrors.com</span>
+          </span>
+        </div>
+      </div>
     </section>
     <section>
       <img width="100%" src="images/footer.jpg" />
